@@ -21,7 +21,6 @@ h1 {
     text-align: center;
     background: rgba(255, 255, 255, 0.1);
     padding: 30px;
-    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -45,7 +44,7 @@ nav ul li a.button {
     color: #fff;
     background-color: #5cb85c;
     padding: 10px 20px;
-    border-radius: 50%;
+    border-radius: 10px;
     font-weight: bold;
     transition: background-color 0.3s;
 }
