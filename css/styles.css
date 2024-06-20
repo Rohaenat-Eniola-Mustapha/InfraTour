@@ -1,7 +1,7 @@
 /* General styles */
 body {
     font-family: Arial, sans-serif;
-    background: radial-gradient(circle, #6e8efb, #a777e3);
+    background: radial-gradient(circle, #4CAF50, #FFFFFF, #FFC107);
     margin: 0;
     padding: 0;
     display: flex;
@@ -45,19 +45,19 @@ nav ul li a.button {
     color: #fff;
     background-color: #5cb85c;
     padding: 10px 20px;
-    border-radius: 50%;
+    border-radius: 10px;
     font-weight: bold;
     transition: background-color 0.3s;
 }
 
 nav ul li a.button:hover {
-    background-color: #4cae4c;
+    background-color: #4CAF50;
 }
 
 /* Form container for register and login pages */
 .form-container {
     background: white;
-    padding: 20px;
+    padding: 50px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -89,11 +89,11 @@ button {
     padding: 10px;
     border: none;
     border-radius: 50px;
-    background-color: #ff3300;
+    background-color: linear-gradient(#4CAF50, #FFFFFF, #FFC107);
     color: white;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #cc2900;
+    background-color: #4CAF50;
 }
