@@ -1,101 +1,52 @@
-/* General styles */
 body {
     font-family: Arial, sans-serif;
-    background: radial-gradient(circle, #6e8efb, #a777e3);
-    margin: 0;
-    padding: 0;
+    background: linear-gradient(135deg, #ffcc00, #ff3300);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 h1 {
-    color: #fff;
-    text-align: center;
     margin-bottom: 20px;
 }
 
-/* Container for the welcome message and buttons */
-.container {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Navigation styles */
-nav {
-    margin-top: 20px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a.button {
-    text-decoration: none;
-    color: #fff;
-    background-color: #5cb85c;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-nav ul li a.button:hover {
-    background-color: #4cae4c;
-}
-
-/* Form container for register and login pages */
-.form-container {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px;
-    margin: 20px;
-}
-
-.form-container h1 {
-    margin-bottom: 20px;
-}
-
-.form-container form {
+form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
-.form-container form label {
-    margin-bottom: 5px;
-    color: #fff;
+label {
+    text-align: left;
 }
 
-.form-container form input {
-    margin-bottom: 15px;
+input[type="text"],
+input[type="email"],
+input[type="password"] {
     padding: 10px;
-    border: none;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.form-container form button {
+button {
     padding: 10px;
     border: none;
-    border-radius: 5px;
-    background-color: #5cb85c;
-    color: #fff;
-    font-weight: bold;
+    border-radius: 50px;
+    background-color: #ff3300;
+    color: white;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.form-container form button:hover {
-    background-color: #4cae4c;
+button:hover {
+    background-color: #cc2900;
 }
