@@ -1,13 +1,60 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #ffcc00, #ff3300);
+    background: radial-gradient(circle, #6e8efb, #a777e3);
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container for the welcome message and buttons */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation styles */
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a.button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #5cb85c;
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav ul li a.button:hover {
+    background-color: #4cae4c;
+}
+
+/* Form container for register and login pages */
 .form-container {
     background: white;
     padding: 20px;
