@@ -1,104 +1,28 @@
-/* General styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #ee9ca7, #ffdde1);
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    color: #333;
 }
 
-/* Header styles */
-.header {
-    text-align: center;
-    margin-bottom: 50px;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.header h1 {
-    font-size: 3em;
-    margin: 0.5em 0;
-}
-
-.header p {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-}
-
-.header nav {
-    margin-top: 20px;
-}
-
-.header nav a.button {
-    text-decoration: none;
-    color: #fff;
-    background-color: #ff6f61;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    margin: 0 10px;
-}
-
-.header nav a.button:hover {
-    background-color: #ff4f41;
-}
-
-/* Features section styles */
-.features {
-    text-align: center;
-    margin-top: 30px;
-    animation: slideIn 2s ease-in-out;
-}
-
-.features h2 {
-    font-size: 2.5em;
+.navbar {
     margin-bottom: 20px;
-    color: #ff6f61;
 }
 
-.features .feature-item {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.carousel-inner img {
+    height: 60vh;
+    object-fit: cover;
 }
 
-.features .feature-item h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
+section {
+    padding: 20px 0;
 }
 
-.features .feature-item p {
-    font-size: 1.2em;
-    color: #555;
-}
-
-/* Footer styles */
-.footer {
-    margin-top: 50px;
+h2 {
     text-align: center;
-    color: #555;
-    animation: fadeIn 2s ease-in-out;
+    margin-bottom: 20px;
 }
 
-.footer p {
-    margin: 0;
-}
-
-/* Keyframe animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideIn {
-    from { transform: translateY(100px); }
-    to { transform: translateY(0); }
+footer {
+    background: #f8f9fa;
+    margin-top: 40px;
 }
