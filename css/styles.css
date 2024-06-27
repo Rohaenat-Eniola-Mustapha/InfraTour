@@ -25,4 +25,7 @@ h2 {
 footer {
     background: #f8f9fa;
     margin-top: 40px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
