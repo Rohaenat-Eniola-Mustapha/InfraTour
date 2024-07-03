@@ -224,17 +224,7 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var options = { startVal: 0, useEasing: true, useGrouping: true, separator: ',', decimal: '.', suffix: '+' };
-        var userCount = new CountUp('userCount', 100000, options);
-        if (!userCount.error) {
-            userCount.start();
-        } else {
-            console.error(userCount.error);
-        }
-    });
-</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
