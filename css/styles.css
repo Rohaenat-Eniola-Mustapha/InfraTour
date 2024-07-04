@@ -35,28 +35,54 @@ body {
     font-size: 16px;
 }
 
-#services .card {
+/* Services Section */
+#services {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+#services h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.card {
     border: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-#services .card:hover {
+.card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-#services .card img {
+.card-img-top {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-#services .card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
+.card-body {
+    text-align: center;
 }
 
-#services .card-text {
-    font-size: 0.9rem;
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    color: #666;
+}
+
+/* Responsive Styling */
+@media (max-width: 767px) {
+    .card {
+        margin-bottom: 20px;
+    }
 }
 
 #download-section h2 {
