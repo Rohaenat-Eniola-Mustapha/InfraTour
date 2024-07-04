@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const counters = [
-        { id: 'userCount', endValue: 100000 },
-        { id: 'happyUsers', endValue: 90000 },
+        { id: 'userCount', endValue: 112000 },
+        { id: 'happyUsers', endValue: 100000 },
         { id: 'fiveStarRatings', endValue: 80000 },
         { id: 'projectSuccess', endValue: 95000 }
     ];
