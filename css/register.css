@@ -1,0 +1,63 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #6e8efb, #a777e3);
+}
+
+.register-box {
+    max-width: 400px;
+    width: 100%;
+}
+
+.user-box {
+    position: relative;
+}
+
+.user-box input {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #aaa;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.btn {
+    background: #03e9f4;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: 0.5s;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.btn:hover {
+    background: #0288d1;
+}
