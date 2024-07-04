@@ -229,8 +229,52 @@ body {
     }
 }
 
+/* Footer Styling */
 footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    background-color: #222;
+    color: #bbb;
+}
+
+footer h5 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #ff3300;
+}
+
+footer .fa {
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+footer .fa:hover {
+    color: #ff3300;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    footer .row {
+        text-align: center;
+    }
 }
