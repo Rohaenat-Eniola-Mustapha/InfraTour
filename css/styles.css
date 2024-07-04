@@ -87,7 +87,8 @@ body {
 
 #download-section h2 {
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 #download-section .logo {
@@ -112,7 +113,7 @@ body {
 
 #user-count {
     background-color: #f8f9fa;
-    padding: 60px 0;
+    padding: 60px 60px;
 }
 
 #user-count h2 {
@@ -166,6 +167,66 @@ body {
 .stars span {
     color: #ffcc00;
     font-size: 1.2rem;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 0;
+}
+
+#contact h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+#contact .form-group {
+    margin-bottom: 20px;
+}
+
+#contact .form-control {
+    background-color: #444;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#contact .form-control::placeholder {
+    color: #bbb;
+}
+
+#contact .form-control:focus {
+    background-color: #555;
+    outline: none;
+    box-shadow: none;
+}
+
+#contact .btn-primary {
+    background-color: #ff3300;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact .btn-primary:hover {
+    background-color: #cc2900;
+}
+
+#contact .container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive Styling */
+@media (max-width: 767px) {
+    #contact .form-control {
+        margin-bottom: 15px;
+    }
 }
 
 footer {
