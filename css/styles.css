@@ -59,6 +59,56 @@ body {
     font-size: 0.9rem;
 }
 
+#download-section h2 {
+    color: #333;
+}
+
+#download-section .logo {
+    max-width: 50px;
+    margin-bottom: 10px;
+}
+
+#download-section .btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#download-section .btn:hover {
+    background-color: #0056b3;
+}
+
+#user-count {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+#user-count h2 {
+    color: #333;
+}
+
+#user-count .display-4 {
+    color: #007bff;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#user-count p {
+    color: #333;
+}
+
+/* Responsive styling */
+@media (max-width: 767px) {
+    #user-count .row .col-md-3 {
+        margin-bottom: 20px;
+    }
+}
+
 #testimonials h2 {
     margin-bottom: 30px;
 }
