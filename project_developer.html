@@ -1,32 +1,34 @@
+<?php
+session_start();
+if (!isset($_SESSION['username']) || $_SESSION['role'] != 'developer') {
+    header("Location: login.html");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Developer Landing Page</title>
-    <link rel="stylesheet" href="css/project_developer.css">
+    <title>Developer Dashboard - InfraTour</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="landing-container">
-        <header class="header">
-            <h1>Welcome, Project Developer!</h1>
-            <p>Manage and track your projects efficiently.</p>
-        </header>
-        <main class="main-content">
-            <div class="card" id="card-1">
-                <h2>Create New Project</h2>
-                <p>Start a new project and collaborate with others.</p>
-            </div>
-            <div class="card" id="card-2">
-                <h2>View Projects</h2>
-                <p>Track the progress of your current projects.</p>
-            </div>
-            <div class="card" id="card-3">
-                <h2>Project Resources</h2>
-                <p>Access resources and tools for your projects.</p>
-            </div>
-        </main>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">InfraTour</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+        </ul>
     </div>
-    <script src="js/project_developer.js"></script>
+</nav>
+<div class="container mt-5">
+    <h2>Developer Dashboard</h2>
+    <p>Welcome, Project Developer! Here are your current projects:</p>
+    <!-- Add content relevant to project developers -->
+</div>
 </body>
 </html>

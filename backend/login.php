@@ -1,5 +1,17 @@
 <?php
-include 'config.php';
+session_start();
+
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "users";
+$port = "3307"
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
@@ -9,14 +21,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc();
-        if (password_verify($password, $user['password'])) {
-            echo "Login successful!";
+        $row = $result->fetch_assoc();
+        if (password_verify($password, $row['password'])) {
+            $_SESSION['username'] = $row['username'];
+            $_SESSION['role'] = $row['role'];
+
+            if ($row['role'] == 'community') {
+                header("Location: community_dashboard.html");
+            } else {
+                header("Location: developer_dashboard.html");
+            }
+            exit();
         } else {
-            echo "Invalid password!";
+            echo "Invalid password";
         }
     } else {
-        echo "No user found with that username!";
+        echo "No user found";
     }
 }
 

@@ -1,32 +1,35 @@
+<?php
+session_start();
+if (!isset($_SESSION['username']) || $_SESSION['role'] != 'community') {
+    header("Location: login.html");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Landing Page</title>
-    <link rel="stylesheet" href="css/community_user.css">
+    <title>Community Dashboard - InfraTour</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="landing-container">
-        <header class="header">
-            <h1>Welcome, Community Member!</h1>
-            <p>Your hub for all community projects and activities</p>
-        </header>
-        <main class="main-content">
-            <div class="card" id="card-1">
-                <h2>Upcoming Events</h2>
-                <p>Stay updated with the latest community events.</p>
-            </div>
-            <div class="card" id="card-2">
-                <h2>Recent Projects</h2>
-                <p>Explore the recent projects developed in your community.</p>
-            </div>
-            <div class="card" id="card-3">
-                <h2>Community Forums</h2>
-                <p>Engage with fellow community members.</p>
-            </div>
-        </main>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">InfraTour</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+        </ul>
     </div>
-    <script src="js/community_user.js"></script>
+</nav>
+<div class="container mt-5">
+    <h2>Community Dashboard</h2>
+    <p>Welcome, Community Member! Here are the ongoing projects in your area:</p>
+    <!-- Add content relevant to community users -->
+</div>
 </body>
 </html>
