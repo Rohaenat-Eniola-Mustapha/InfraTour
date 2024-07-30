@@ -2,10 +2,9 @@
 session_start();
 
 $servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "users";
-$port = "3307"
+$username = "infratour_user";
+$password = "your_password";
+$dbname = "infratour";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -14,29 +13,29 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
 
-    $sql = "SELECT * FROM users WHERE username='$username'";
+    $sql = "SELECT id, name, password, role FROM users WHERE email='$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        if (password_verify($password, $row['password'])) {
-            $_SESSION['username'] = $row['username'];
-            $_SESSION['role'] = $row['role'];
-
-            if ($row['role'] == 'community') {
-                header("Location: community_dashboard.html");
+        if (password_verify($password, $row["password"])) {
+            $_SESSION["userid"] = $row["id"];
+            $_SESSION["username"] = $row["name"];
+            $_SESSION["role"] = $row["role"];
+            if ($row["role"] == "community_user") {
+                header("Location: community_dashboard.php");
             } else {
-                header("Location: developer_dashboard.html");
+                header("Location: project_dashboard.php");
             }
-            exit();
+            exit;
         } else {
-            echo "Invalid password";
+            echo "Invalid password.";
         }
     } else {
-        echo "No user found";
+        echo "No user found with that email.";
     }
 }
 
