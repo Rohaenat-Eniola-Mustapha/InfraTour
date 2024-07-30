@@ -1,39 +1,44 @@
 const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-app.use(cors());
-app.use(bodyParser.json());
+// Middleware for parsing application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Database connection
-const db = mysql.createConnection({
+// Serve static files (HTML, CSS, JS)
+app.use(express.static(__dirname));
+
+// MySQL Connection Pool
+const pool = mysql.createPool({
+    connectionLimit: 10,
     host: 'localhost',
-    user: 'root', // use your MySQL username
-    password: 'root', // use your MySQL password
-    database: 'infratour'
+    user: 'root',
+    password: 'root',
+    database: 'your_database_name',
+    port: '3306'
 });
 
-db.connect((err) => {
-    if (err) throw err;
-    console.log('Connected to database');
-});
-
-// Register endpoint
+// Handle POST request to /register
 app.post('/register', (req, res) => {
     const { username, email, password } = req.body;
 
-    const sql = 'INSERT INTO users (username, email, password) VALUES (?, ?, ?)';
-    db.query(sql, [username, email, password], (err, result) => {
-        if (err) throw err;
-        res.send('User registered successfully');
+    // Insert user into database
+    pool.query('INSERT INTO users (username, email, password) VALUES (?, ?, ?)', [username, email, password], (err, result) => {
+        if (err) {
+            console.error('Error registering user:', err.message);
+            res.json({ success: false });
+            return;
+        }
+
+        console.log('User registered successfully!');
+        res.json({ success: true });
     });
 });
 
+// Start server
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
