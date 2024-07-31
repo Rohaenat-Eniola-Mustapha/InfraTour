@@ -3,7 +3,7 @@ session_start();
 
 $servername = "localhost";
 $username = "infratour_user";
-$password = "your_password";
+$password = "root";
 $dbname = "infratour";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
