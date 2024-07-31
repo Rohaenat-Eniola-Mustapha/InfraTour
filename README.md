@@ -48,6 +48,12 @@ InfraTour aims to bridge the gap between infrastructure development projects and
    open index.html
    ```
 
+Or
+
+1. Go to settings in the repository
+2. click on Pages
+3. Click the link to visit the site
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
