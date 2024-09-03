@@ -1,18 +1,16 @@
 from django.shortcuts import render
 
-# Create your views here.
-from django.shortcuts import render, redirect
-from .forms import ContactForm
+def index_view(request):
+    return render(request, 'main/index.html')
+
+def login_view(request):
+    return render(request, 'main/login.html')
+
+def signup_view(request):
+    return render(request, 'main/signup.html')
 
 def contact_view(request):
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('success')
-    else:
-        form = ContactForm()
-    return render(request, 'contact.html', {'form': form})
+    return render(request, 'main/contact.html')
 
 def success_view(request):
-    return render(request, 'success.html')
+    return render(request, 'main/success.html')
